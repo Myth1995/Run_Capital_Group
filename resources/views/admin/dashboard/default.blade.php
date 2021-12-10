@@ -35,6 +35,27 @@
             display: flex;
             flex-direction: row;
         }
+        .more-btn-panel {
+            display: flex;
+            border-radius: 0 0 10px 10px;
+        }
+        .more-btn-panel:hover {
+            background-color: #a4a4a4;
+        }
+        .more-btn {
+            margin: auto;
+            cursor: default;
+        }
+        .more-btn:hover {
+            /*background-color: #a4a4a4;*/
+        }
+        .post-preview-title {
+            font-weight: bolder;
+        }
+        .recipient-body {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 </style>
 @endpush
@@ -153,61 +174,64 @@
                                             <div class="confetti-piece"></div>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                    <h4>Run Binary Blog</h4>
-                                    <div class="row">
-                    	                <div class="col-xl-12 col-md-6 m-b-10">
-                    	                    <!--<div class="card">-->
-                    	                        <div class="blog-box blog-list">
-                    	                            <div class="m-r-20">
-                    	                                <div class="blog-wrraper">
-                    	                                    <a href="blog-single.html"><img class="img-fluid sm-100-wp p-0" src="{{asset('assets/images/blog/blog1.png')}}" alt="" /></a>
-                    	                                </div>
-                    	                            </div>
-                    	                            <div>
-                    	                                <div class="blog-details">
-                                                            <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML </h6></a>
-                    	                                    <div class="blog-date">02 January 2021</div>
-                    	                                </div>
-                    	                            </div>
-                    	                        </div>
-                    	                    <!--</div>-->
+                                    <div class="card b-r-10">
+                                        <h4 class="post-preview-title m-t-20 m-l-10">Run Binary Blog</h4>
+                                        <div class="row m-l-10">
+                        	                <div class="col-xl-12 col-md-6 m-b-10">
+                        	                    <!--<div class="card">-->
+                        	                        <div class="blog-box blog-list col-md-10">
+                        	                            <div class="m-r-20">
+                        	                                <div class="blog-wrraper">
+                        	                                    <a href="blog-single.html"><img class="img-fluid sm-100-wp p-0" src="{{asset('assets/images/blog/blog1.png')}}" alt="" /></a>
+                        	                                </div>
+                        	                            </div>
+                        	                            <div class="col-xs-8">
+                        	                                <div class="blog-details">
+                                                                <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML </h6></a>
+                        	                                    <div class="blog-date">02 December 2021</div>
+                        	                                </div>
+                        	                            </div>
+                        	                        </div>
+                        	                    <!--</div>-->
+                        	                </div>
+                        	                <div class="col-xl-12 col-md-6 m-b-10">
+                        	                    <!--<div class="card">-->
+                        	                        <div class="blog-box blog-list col-md-10">
+                        	                            <div class="m-r-20">
+                        	                                <div class="blog-wrraper">
+                        	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog2.png')}}" alt="" /></a>
+                        	                                </div>
+                        	                            </div>
+                        	                            <div class="col-xs-8">
+                        	                                <div class="blog-details">
+                                                                <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
+                        	                                    <div class="blog-date">03 December 2021</div>
+                        	                                </div>
+                        	                            </div>
+                        	                        </div>
+                        	                    <!--</div>-->
+                        	                </div>
+                        	                <div class="col-xl-12 col-md-6 m-b-10">
+                        	                    <!--<div class="card">-->
+                        	                        <div class="blog-box blog-list col-md-10">
+                        	                            <div class="m-r-20">
+                        	                                <div class="blog-wrraper">
+                        	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog3.png')}}" alt="" /></a>
+                        	                                </div>
+                        	                            </div>
+                        	                            <div class="col-xs-8">
+                        	                                <div class="blog-details">
+                                                                <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
+                        	                                    <div class="blog-date">04 December 2021</div>
+                        	                                </div>
+                        	                            </div>
+                        	                        </div>
+                        	                    <!--</div>-->
+                        	                </div>
+                        	            </div>
+                    	                <div class="col-xl-12 col-xs-12 more-btn-panel">
+                    	                    <button class="btn more-btn col-xl-5">Leer mas</button>
                     	                </div>
-                    	                <div class="col-xl-12 col-md-6 m-b-10">
-                    	                    <!--<div class="card">-->
-                    	                        <div class="blog-box blog-list">
-                    	                            <div class="m-r-20">
-                    	                                <div class="blog-wrraper">
-                    	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog2.png')}}" alt="" /></a>
-                    	                                </div>
-                    	                            </div>
-                    	                            <div>
-                    	                                <div class="blog-details">
-                                                            <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
-                    	                                    <div class="blog-date">03 January 2021</div>
-                    	                                </div>
-                    	                            </div>
-                    	                        </div>
-                    	                    <!--</div>-->
-                    	                </div>
-                    	                <div class="col-xl-12 col-md-6 m-b-10">
-                    	                    <!--<div class="card">-->
-                    	                        <div class="blog-box blog-list">
-                    	                            <div class="m-r-20">
-                    	                                <div class="blog-wrraper">
-                    	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog3.png')}}" alt="" /></a>
-                    	                                </div>
-                    	                            </div>
-                    	                            <div>
-                    	                                <div class="blog-details">
-                                                            <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
-                    	                                    <div class="blog-date">03 January 2021</div>
-                    	                                </div>
-                    	                            </div>
-                    	                        </div>
-                    	                    <!--</div>-->
-                    	                </div>
-                    	            </div>
                     	            </div>
                                 </div>
                                 <div class="col-xl-6 col-xs-12 col-md-12 col-sm-12">
@@ -257,10 +281,29 @@
                                         </div>
                                     </div>
                                 </div>
+                                    <div class="card m-t-10 m-l-10 p-10">
+                                        <h4>Recipients</h4>
+                                        <div class="recipient-body m-t-20">
+                                            <div style="display: flex;">
+                                                <img class="img-100 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="#">
+                                                <div class="m-l-20 m-t-20">
+                                                    <h4>Samuel Bro</h4>
+                                                    <h6>info@example.com</h6>
+                                                </div>
+                                            </div>
+                                            <div class="p-20 b-r-10" style="display: flex; border: 2px solid #1EAAE7">
+                                                <i class="icofont icofont-telephone m-r-30" style="font-size: 50px; color: #1EAAE7;"></i>
+                                                <div style="font-size: 16px; color: #1EAAE7">
+                                                    <div>Telepon</div>
+                                                    <div>+91 123-456-7890</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <div class="col-xl-12 xl-100 box-col-12">
                 <div class="card">
                 <div class="cal-date-widget card-body">
