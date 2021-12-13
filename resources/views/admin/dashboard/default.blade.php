@@ -137,7 +137,7 @@
                         <div class="cal-date-widget card-body">
                             <div class="row">
                                 <div class="col-xl-6 col-xs-12 col-md-12 col-sm-12">
-                                    <div class="card profile-greeting m-r-30 m-b-10">
+                                    <div class="card profile-greeting">
                                         <div class="card-header p-t-10">
                                             <div class="header-top">
                                                 <div class="setting-list bg-primary position-unset">
@@ -174,8 +174,9 @@
                                             <div class="confetti-piece"></div>
                                         </div>
                                     </div>
-                                    <div class="card b-r-10">
-                                        <h4 class="post-preview-title m-t-20 m-l-10">Run Binary Blog</h4>
+                                    <div class="card b-r-10 m-b-0 m-t-55">
+                                        <h4 class="post-preview-title m-t-5 m-b-15 m-l-20" style="color: white; ">Run Binary Blog</h4>
+                                        <div class="m-b-20" style="height: 3px; background-color: #152731;"></div>
                                         <div class="row m-l-10">
                         	                <div class="col-xl-12 col-md-6 m-b-10">
                         	                    <!--<div class="card">-->
@@ -230,12 +231,12 @@
                         	                </div>
                         	            </div>
                     	                <div class="col-xl-12 col-xs-12 more-btn-panel">
-                    	                    <button class="btn more-btn col-xl-5">Leer mas</button>
+                    	                    <button class="btn more-btn col-xl-5" style="font-size: 17px; color: white;">Leer mas</button>
                     	                </div>
                     	            </div>
                                 </div>
                                 <div class="col-xl-6 col-xs-12 col-md-12 col-sm-12">
-                                    <div class="card mb-30">
+                                    <div class="card m-b-10">
                                         <div class="card-body pb-0">
                                             <h4 class="card-title">Last Month Summary</h4>
                                             <div class="row">
@@ -282,18 +283,18 @@
                                     </div>
                                 </div>
                                     <div class="card m-t-10 m-l-10 p-10">
-                                        <h4>Recipients</h4>
-                                        <div class="recipient-body m-t-20">
+                                        <h5>Recipients</h4>
+                                        <div class="recipient-body">
                                             <div style="display: flex;">
-                                                <img class="img-100 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" alt="#">
-                                                <div class="m-l-20 m-t-20">
-                                                    <h4>Samuel Bro</h4>
-                                                    <h6>info@example.com</h6>
+                                                <img class="img-60 rounded-circle" src="{{asset('assets/images/user/1.jpg')}}" style="height: 60px;" alt="#">
+                                                <div class="m-l-10">
+                                                    <h6>Samuel Bro</h6>
+                                                    <div>info@example.com</div>
                                                 </div>
                                             </div>
-                                            <div class="p-20 b-r-10" style="display: flex; border: 2px solid #1EAAE7">
-                                                <i class="icofont icofont-telephone m-r-30" style="font-size: 50px; color: #1EAAE7;"></i>
-                                                <div style="font-size: 16px; color: #1EAAE7">
+                                            <div class="p-10 b-r-10" style="display: flex; border: 2px solid #1EAAE7;">
+                                                <i class="icofont icofont-telephone m-r-10" style="font-size: 30px; color: #1EAAE7;"></i>
+                                                <div style="font-size: 10px; color: #1EAAE7">
                                                     <div>Telepon</div>
                                                     <div>+91 123-456-7890</div>
                                                 </div>
