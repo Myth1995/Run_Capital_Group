@@ -40,7 +40,7 @@
             border-radius: 0 0 10px 10px;
         }
         .more-btn-panel:hover {
-            background-color: #a4a4a4;
+            /*background-color: #a4a4a4;*/
         }
         .more-btn {
             margin: auto;
@@ -56,10 +56,81 @@
             display: flex;
             justify-content: space-between;
         }
+        .dataTables_length#row-select-multiple_length {
+            display: none;
+        }
     }
 </style>
 @endpush
-    @section('content')        
+    @section('content')
+        @php
+            $totalAry = [
+                [
+                    "name" => "Tiger Nixon",
+                    "position" => "System Architect",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2011/04/25",
+                    "salary" => "$320,800",
+                ],
+                [
+                    "name" => "Garrett Winters",
+                    "position" => "Accountant",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2011/07/25",
+                    "salary" => "$170,750",
+                ],
+                [
+                    "name" => "Ashton Cox",
+                    "position" => "Junior Technical Author",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2009/01/12",
+                    "salary" => "$86,000",
+                ],
+                [
+                    "name" => "Cedric Kelly",
+                    "position" => "Senior Javascript Developer",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2012/03/29",
+                    "salary" => "$433,060",
+                ],
+                [
+                    "name" => "Airi Satou",
+                    "position" => "Accountant",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2008/11/28",
+                    "salary" => "$162,700",
+                ],
+                [
+                    "name" => "Brielle Williamson",
+                    "position" => "Integration Specialist",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2012/12/02",
+                    "salary" => "$372,000",
+                ],
+                [
+                    "name" => "Haley Kennedy",
+                    "position" => "Senior Marketing Designer",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2012/12/18",
+                    "salary" => "$313,500",
+                ],
+                [
+                    "name" => "Tatyana Fitzpatrick",
+                    "position" => "Regional Director",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2010/03/17",
+                    "salary" => "$385,750",
+                ],
+                [
+                    "name" => "Michael Silva",
+                    "position" => "Marketing Designer",
+                    "invoiceID" => "#123412451",
+                    "startDate" => "2012/11/27",
+                    "salary" => "$198,500",
+                ]
+            ];
+            $ary = $totalAry;
+        @endphp
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6 col-xl-3 col-lg-6">
@@ -179,59 +250,53 @@
                                         <div class="m-b-20" style="height: 3px; background-color: #152731;"></div>
                                         <div class="row m-l-10">
                         	                <div class="col-xl-12 col-md-6 m-b-10">
-                        	                    <!--<div class="card">-->
-                        	                        <div class="blog-box blog-list col-md-10">
-                        	                            <div class="m-r-20">
-                        	                                <div class="blog-wrraper">
-                        	                                    <a href="blog-single.html"><img class="img-fluid sm-100-wp p-0" src="{{asset('assets/images/blog/blog1.png')}}" alt="" /></a>
-                        	                                </div>
-                        	                            </div>
-                        	                            <div class="col-xs-8">
-                        	                                <div class="blog-details">
-                                                                <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML </h6></a>
-                        	                                    <div class="blog-date">02 December 2021</div>
-                        	                                </div>
-                        	                            </div>
-                        	                        </div>
-                        	                    <!--</div>-->
+                    	                        <div class="blog-box blog-list col-md-10">
+                    	                            <div class="m-r-20">
+                    	                                <div class="blog-wrraper">
+                    	                                    <a href="blog-single.html"><img class="img-fluid sm-100-wp p-0" src="{{asset('assets/images/blog/blog1.png')}}" alt="" /></a>
+                    	                                </div>
+                    	                            </div>
+                    	                            <div class="col-xs-8">
+                    	                                <div class="blog-details">
+                                                            <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML </h6></a>
+                    	                                    <div class="blog-date">02 December 2021</div>
+                    	                                </div>
+                    	                            </div>
+                    	                        </div>
                         	                </div>
                         	                <div class="col-xl-12 col-md-6 m-b-10">
-                        	                    <!--<div class="card">-->
-                        	                        <div class="blog-box blog-list col-md-10">
-                        	                            <div class="m-r-20">
-                        	                                <div class="blog-wrraper">
-                        	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog2.png')}}" alt="" /></a>
-                        	                                </div>
-                        	                            </div>
-                        	                            <div class="col-xs-8">
-                        	                                <div class="blog-details">
-                                                                <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
-                        	                                    <div class="blog-date">03 December 2021</div>
-                        	                                </div>
-                        	                            </div>
-                        	                        </div>
-                        	                    <!--</div>-->
+                    	                        <div class="blog-box blog-list col-md-10">
+                    	                            <div class="m-r-20">
+                    	                                <div class="blog-wrraper">
+                    	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog2.png')}}" alt="" /></a>
+                    	                                </div>
+                    	                            </div>
+                    	                            <div class="col-xs-8">
+                    	                                <div class="blog-details">
+                                                            <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
+                    	                                    <div class="blog-date">03 December 2021</div>
+                    	                                </div>
+                    	                            </div>
+                    	                        </div>
                         	                </div>
                         	                <div class="col-xl-12 col-md-6 m-b-10">
-                        	                    <!--<div class="card">-->
-                        	                        <div class="blog-box blog-list col-md-10">
-                        	                            <div class="m-r-20">
-                        	                                <div class="blog-wrraper">
-                        	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog3.png')}}" alt="" /></a>
-                        	                                </div>
-                        	                            </div>
-                        	                            <div class="col-xs-8">
-                        	                                <div class="blog-details">
-                                                                <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
-                        	                                    <div class="blog-date">04 December 2021</div>
-                        	                                </div>
-                        	                            </div>
-                        	                        </div>
-                        	                    <!--</div>-->
+                    	                        <div class="blog-box blog-list col-md-10">
+                    	                            <div class="m-r-20">
+                    	                                <div class="blog-wrraper">
+                    	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="{{asset('assets/images/blog/blog3.png')}}" alt="" /></a>
+                    	                                </div>
+                    	                            </div>
+                    	                            <div class="col-xs-8">
+                    	                                <div class="blog-details">
+                                                            <a href="learning-detailed.html"> <h6>Maximize risk adjusted returns with IML</h6></a>
+                    	                                    <div class="blog-date">04 December 2021</div>
+                    	                                </div>
+                    	                            </div>
+                    	                        </div>
                         	                </div>
                         	            </div>
-                    	                <div class="col-xl-12 col-xs-12 more-btn-panel">
-                    	                    <button class="btn more-btn col-xl-5" style="font-size: 17px; color: white;">Leer mas</button>
+                    	                <div class="col-xl-12 col-xs-12 more-btn-panel" style="justify-content: center; padding: 10px 0;">
+                    	                    <span>Leer mas</span>
                     	                </div>
                     	            </div>
                                 </div>
@@ -305,136 +370,50 @@
                             </div>
                         </div>
                     </div>
+                
                 <div class="col-xl-12 xl-100 box-col-12">
-                <div class="card">
-                <div class="cal-date-widget card-body">
-                <div class="row">
-                <div class="col-xl-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="col-sm-12">
-        	            <div class="card">
-        	                <div class="card-header">
-        	                    <h5>Payment History</h5>
-        	                    <span style="display: none;">
-        	                        It can be useful to provide the user with the option to select rows in a DataTable. This can be done by using a click event to add / remove a class on the table rows. The
-        	                        <code class="api" title="DataTables API method">rows().data()</code>method can then be used to get the data for the selected rows. In this case it is simply counting the number of selected rows, but much more complex
-        	                        interactions can easily be developed.
-        	                    </span>
-        	                </div>
-        	                <div class="card-body">
-        	                    <div class="table-responsive">
-        	                        <button class="btn btn-primary mb-3" id="multiple-row-select-btn">Row count</button>
-        	                        <table class="display" id="row-select-multiple">
-        	                            <thead>
-        	                                <tr>
-        	                                    <th>Name</th>
-        	                                    <th>Position</th>
-        	                                    <th>Invoicd ID</th>
-        	                                    <th>Start date</th>
-        	                                    <th>Salary</th>
-        	                                    <th></th>
-        	                                </tr>
-        	                            </thead>
-        	                            <tbody>
-        	                                <tr>
-        	                                    <td>Tiger Nixon</td>
-        	                                    <td>System Architect</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2011/04/25</td>
-        	                                    <td>$320,800</td>
-        	                                    <td onClick="checkBoxClick()"><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Garrett Winters</td>
-        	                                    <td>Accountant</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2011/07/25</td>
-        	                                    <td>$170,750</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Ashton Cox</td>
-        	                                    <td>Junior Technical Author</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2009/01/12</td>
-        	                                    <td>$86,000</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Cedric Kelly</td>
-        	                                    <td>Senior Javascript Developer</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2012/03/29</td>
-        	                                    <td>$433,060</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Airi Satou</td>
-        	                                    <td>Accountant</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2008/11/28</td>
-        	                                    <td>$162,700</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Brielle Williamson</td>
-        	                                    <td>Integration Specialist</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2012/12/02</td>
-        	                                    <td>$372,000</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>	                                
-        	                                <tr>
-        	                                    <td>Haley Kennedy</td>
-        	                                    <td>Senior Marketing Designer</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2012/12/18</td>
-        	                                    <td>$313,500</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Tatyana Fitzpatrick</td>
-        	                                    <td>Regional Director</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2010/03/17</td>
-        	                                    <td>$385,750</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                                <tr>
-        	                                    <td>Michael Silva</td>
-        	                                    <td>Marketing Designer</td>
-        	                                    <td>#123412451</td>
-        	                                    <td>2012/11/27</td>
-        	                                    <td>$198,500</td>
-        	                                    <td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px" /></td>
-        	                                </tr>
-        	                            </tbody>
-        	                            <tfoot>
-        	                                <tr>
-        	                                    <th>Name</th>
-        	                                    <th>Position</th>
-        	                                    <th>Office</th>
-        	                                    <th>Invoice ID</th>
-        	                                    <th>Start date</th>
-        	                                    <th>Salary</th>
-        	                                </tr>
-        	                            </tfoot>
-        	                        </table>
-        	                    </div>
-        	                </div>
-        	            </div>
-	                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
+                    <div class="card">
+                        <div class="cal-date-widget card-body">
+                                    <div class="col-sm-12">
+                        	            <div class="card">
+                        	                <div class="card-header">
+                        	                    <h5>Payment History</h5>
+                        	                </div>
+                        	                <div style="display: flex; padding-left: 30px; position: absolute; top: 120px; z-index: 8;">
+                	                            <button class="btn btn-primary mb-3 m-r-10" onClick="tableShow(1)">Transacciones Generales</button>
+                                                <!-- <a class="btn btn-success" href="{{ url('table-data/2') }}" >Transacciones Generales</a> -->
+                	                            <button class="btn btn-secondary mb-3" onClick="tableShow(2)">Mis Propias Transacciones</button>
+                	                        </div>
+                        	                <div class="card-body table-panel">
+                                                <div class="table-responsive">
+                        	                       @include('admin/dashboard/table')
+                                                </div>
+                        	                </div>
+                        	            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
     @push('scripts')    
-        <script>
-            function checkBoxClick(bool bFlag) {
+        <script type="text/javascript">
+            // $(document).ready(function() {
+            //     tableShow()
+            // });
+            function tableShow(i) {
+                $.get('/table-data/'+i, function(result) {
+                    $('div.table-responsive table tbody').empty();
+                    $('div.table-responsive table tbody').fadeOut();
+                    let data = result;
+                    data.map(function(value, index) {
+                        let tr = $("<tr><td>"+data[index].name+"</td><td>"+data[index].position+"</td><td>"+data[index].invoiceID+"</td><td>"+data[index].startDate+"</td><td>"+data[index].salary+`</td><td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px"/></td></tr>`);
+                        $('div.table-responsive table tbody').append(tr);
+                    });
+                    $('div.table-responsive table tbody').fadeIn();
+                    console.log(data);
+                });
             }
         </script>
         <script src="{{asset('assets/js/echart.js')}}"></script>
