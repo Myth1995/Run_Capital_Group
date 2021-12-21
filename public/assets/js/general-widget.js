@@ -38,7 +38,49 @@ var general_widget = {
         }); 
     }
 };
+
+var echart_dashboard = {
+    init: function() {
+        var myChart = echarts.init(document.getElementById('echart_dashboard'));
+        var option;
+
+        option = {
+        tooltip: {
+            trigger: 'item'
+        },
+        series: [
+            {
+                name: 'Sessions',
+                type: 'pie',
+                radius: ['60%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 80, name: 'Completed', itemStyle: {color: '#24695C'},},
+                    { value: 20, name: 'Pending', itemStyle: {color: '#202938'}, }
+                ]
+            }
+        ]
+        };
+
+        myChart.setOption(option);
+    }
+};
 (function($) {
     "use strict";
     general_widget.init();
+    echart_dashboard.init();
 })(jQuery);
