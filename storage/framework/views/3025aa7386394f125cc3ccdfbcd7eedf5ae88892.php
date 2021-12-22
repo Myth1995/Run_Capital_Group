@@ -1,12 +1,12 @@
     <table class="display" id="row-select-multiple">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Invoicd ID</th>
-                <th>Start date</th>
-                <th>Salary</th>
-                <th></th>
+                <th>Usuario Titular</th>
+                <th>Transacciones</th>
+                <th>Facturación</th>
+                <th>Fecha</th>
+                <th>Monto</th>
+                <th>Estado</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +17,7 @@
                 <td><?php echo e($el['invoiceID']); ?></td>
                 <td><?php echo e($el['startDate']); ?></td>
                 <td><?php echo e($el['salary']); ?></td>
-                <td><img src="<?php echo e(asset('assets/images/dashboard/datatable_check.png')); ?>" alt="" height="20px"/></td>
-                <td><img src="<?php echo e(asset('assets/images/dashboard/datatable_check.png')); ?>" alt="" height="20px"/></td>
+                <td><div style="display: flex;"><img src="<?php echo e(asset('assets/images/dashboard/datatable_check.png')); ?>" alt="" height="25px"/></div></td>
             </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>

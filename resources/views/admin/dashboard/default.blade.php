@@ -23,6 +23,12 @@
         table.dataTable.display tbody tr td:last-child img {
             margin: auto;
         }
+        
+        table.dataTable.display thead 
+            tr th::before, th::after {
+            content: none !important;
+        }
+        
         .blog-box.blog-list a img {
             width: 100px;
             height: 100px;

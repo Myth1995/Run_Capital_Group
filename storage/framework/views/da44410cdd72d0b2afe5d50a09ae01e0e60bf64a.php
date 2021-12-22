@@ -18,15 +18,21 @@
             color: #24695C;
         }
         table.dataTable.display tbody tr td:last-child {
-            display: flex;
-            border-bottom: none;
+            /*display: flex;*/
+            /*border-bottom: none;*/
         }
         table.dataTable.display tbody tr td:last-child img {
             margin: auto;
         }
+        
+        table.dataTable.display thead 
+            tr th::before, th::after {
+            content: none !important;
+        }
+        
         .blog-box.blog-list a img {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 10px;
         }
         .blog-list .blog-details h6:hover {
@@ -251,7 +257,7 @@
                                         <div class="m-b-20" style="height: 3px; background-color: #152731;"></div>
                                         <div class="row m-l-10">
                         	                <div class="col-xl-12 col-md-6 m-b-10">
-                    	                        <div class="blog-box blog-list col-md-10">
+                    	                        <div class="blog-box blog-list col-md-12">
                     	                            <div class="m-r-20">
                     	                                <div class="blog-wrraper">
                     	                                    <a href="blog-single.html"><img class="img-fluid sm-100-wp p-0" src="<?php echo e(asset('assets/images/blog/blog1.png')); ?>" alt="" /></a>
@@ -266,7 +272,7 @@
                     	                        </div>
                         	                </div>
                         	                <div class="col-xl-12 col-md-6 m-b-10">
-                    	                        <div class="blog-box blog-list col-md-10">
+                    	                        <div class="blog-box blog-list col-md-12">
                     	                            <div class="m-r-20">
                     	                                <div class="blog-wrraper">
                     	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="<?php echo e(asset('assets/images/blog/blog2.png')); ?>" alt="" /></a>
@@ -281,7 +287,7 @@
                     	                        </div>
                         	                </div>
                         	                <div class="col-xl-12 col-md-6 m-b-10">
-                    	                        <div class="blog-box blog-list col-md-10">
+                    	                        <div class="blog-box blog-list col-md-12">
                     	                            <div class="m-r-20">
                     	                                <div class="blog-wrraper">
                     	                                    <a href="blog-single.html"><img class="img-fluid sm-100-w p-0" src="<?php echo e(asset('assets/images/blog/blog3.png')); ?>" alt="" /></a>
@@ -304,36 +310,36 @@
                                 <div class="col-xl-6 col-xs-12 col-md-12 col-sm-12">
                                     <div class="card m-b-10">
                                         <div class="card-body pb-0">
-                                            <h4 class="card-title">Last Month Summary</h4>
+                                            <h4 class="card-title" style="font-weight: bold; color: white;">Resumen de Inversión </h4>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col">Item</th>
-                                                                <th scope="col">Status</th>
+                                                                <th scope="col">Detalles</th>
+                                                                <th scope="col">Monto</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <td>Portable Speaker</td>
-                                                                <td class="font-weight-bold text-success">+ $1200</td>
+                                                                <td>Deposito Realizado</td>
+                                                                <td style="color: #24695C;">$0.00 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Portable Headphone</td>
-                                                                <td class="text-success">In Stock</td>
+                                                                <td>Ganancias Esperadas</td>
+                                                                <td style="color: #24695C;">Sin Iniciar</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Speaker</td>
-                                                                <td class="text-danger">Out of stock</td>
+                                                                <td>Fecha de Inicio</td>
+                                                                <td style="color: #BDBFBB;">Sin Iniciar</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Watch</td>
-                                                                <td class="text-warning">Low stock</td>
+                                                                <td>Durabilidad</td>
+                                                                <td style="color: #24695C;">Sin Iniciar</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Portable Headphone</td>
-                                                                <td class="font-weight-bold">In Stock</td>
+                                                                <td>Dias de Pagos</td>
+                                                                <td style="color: #24695C;">Sin Iniciar</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -342,25 +348,26 @@
                                                     <div class="chart-wrapper">
                                                         <div id="echart_dashboard" style="height: 300px; width: 100%;">
                                                     </div>
-                                                    <button class="btn btn-light" style="padding: 0.3rem 1.3rem;position: absolute;right: 10px;bottom: 15px;">Next</button>
+                                                    <button class="btn btn-light" style="padding: 0.3rem 1.3rem;position: absolute;right: 10px;bottom: 15px;">Siguiente</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                     <div class="card m-t-10 m-l-10 p-10">
-                                        <h5>Recipients</h4>
+                                        <h5 style="font-weight: bold; color: white;">Atención al Cliente</h5>
                                         <div class="recipient-body">
                                             <div style="display: flex;">
-                                                <img class="img-60 rounded-circle" src="<?php echo e(asset('assets/images/user/1.jpg')); ?>" style="height: 60px;" alt="#">
+                                                <img class="img-60 rounded-circle" src="<?php echo e(asset('assets/images/dashboard/telephone/auriculares.png')); ?>" style="height: 60px;" alt="#">
                                                 <div class="m-l-10">
-                                                    <h6>Samuel Bro</h6>
+                                                    <h6>Asistencia</h6>
                                                     <div>info@example.com</div>
                                                 </div>
                                             </div>
-                                            <div class="p-10 b-r-10" style="display: flex; border: 2px solid #1EAAE7;">
-                                                <i class="icofont icofont-telephone m-r-10" style="font-size: 30px; color: #1EAAE7;"></i>
-                                                <div style="font-size: 10px; color: #1EAAE7">
+                                            <div class="p-10 b-r-10" style="display: flex; border: 2px solid #24695C;">
+                                                <img class="img-40 m-r-10" src="<?php echo e(asset('assets/images/dashboard/telephone/tel-icon.png')); ?>" style="height: 40px;" alt="#">
+                                                <!--<i class="icofont icofont-telephone m-r-10" style="font-size: 30px; color: #1F695C;"></i>-->
+                                                <div style="font-size: 11px; color: #1F695C">
                                                     <div>Telepon</div>
                                                     <div>+91 123-456-7890</div>
                                                 </div>
@@ -375,22 +382,26 @@
                 <div class="col-xl-12 xl-100 box-col-12">
                     <div class="card">
                         <div class="cal-date-widget card-body">
-                                    <div class="col-sm-12">
-                        	            <div class="card">
-                        	                <div class="card-header">
-                        	                    <h5>Payment History</h5>
-                        	                </div>
-                        	                <div style="display: flex; padding-left: 30px; position: absolute; top: 120px; z-index: 8;">
-                	                            <button class="btn btn-primary mb-3 m-r-10" onClick="tableShow(1)">Transacciones Generales</button>
-                                                <!-- <a class="btn btn-success" href="<?php echo e(url('table-data/2')); ?>" >Transacciones Generales</a> -->
-                	                            <button class="btn btn-secondary mb-3" onClick="tableShow(2)">Mis Propias Transacciones</button>
-                	                        </div>
-                        	                <div class="card-body table-panel">
-                                                <div class="table-responsive">
-                        	                       <?php echo $__env->make('admin/dashboard/table', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-                                                </div>
-                        	                </div>
-                        	            </div>
+                            <div class="col-sm-12">
+                	            <div class="card">
+                	                <div class="card-header" style="padding-top: 10px;">
+                	                    <h5>Historial de Transacciones</h5>
+                	                </div>
+                	                <div style="display: flex; padding-left: 30px; position: absolute; top: 60px; z-index: 8;">
+                	                    <ul class="nav nav-tabs border-tab" id="top-tab" role="tablist">
+                                          <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="true" onClick="tableShow(1)" style="padding-left: 0px;">Transacciones Generales</a></li>
+                                          <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false" onClick="tableShow(2)">Mis Propias Transacciones</a></li>
+                                        </ul>
+        	                            <!--<button class="btn btn-primary mb-3 m-r-10" onClick="tableShow(1)">Transacciones Generales</button>-->
+                                        <!-- <a class="btn btn-success" href="<?php echo e(url('table-data/2')); ?>" >Transacciones Generales</a> -->
+        	                            <!--<button class="btn btn-secondary mb-3" onClick="tableShow(2)">Mis Propias Transacciones</button>-->
+        	                        </div>
+                	                <div class="card-body table-panel" style="margin-top: -25px;">
+                                        <div class="table-responsive">
+                	                       <?php echo $__env->make('admin/dashboard/table', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                                        </div>
+                	                </div>
+                	            </div>
                             </div>
                         </div>
                     </div>
