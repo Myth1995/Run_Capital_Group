@@ -1,6 +1,6 @@
     <table class="display" id="row-select-multiple">
         <thead>
-            <tr>
+            <tr style="border-left-color: rgba(36, 105, 92, 0);">
                 <th>Usuario Titular</th>
                 <th>Transacciones</th>
                 <th>Facturación</th>
@@ -12,12 +12,12 @@
         <tbody>
             @foreach($ary as $el)
             <tr>
-                <td>{{$el['name']}}</td>
+                <td style="border-left-color: rgba(36, 105, 92, 0);">{{$el['name']}}</td>
                 <td>{{$el['position']}}</td>
                 <td>{{$el['invoiceID']}}</td>
                 <td>{{$el['startDate']}}</td>
                 <td>{{$el['salary']}}</td>
-                <td><div style="display: flex;"><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="25px"/></div></td>
+                <td><div><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="25px"/></div></td>
             </tr>
             @endforeach
         </tbody>
