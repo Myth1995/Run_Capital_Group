@@ -13,6 +13,7 @@
 <style>
         table.dataTable.display tbody tr td:first-child, td:nth-child(5) {
             font-weight: bold;
+            border-left: 1px solid #111727;
         }
         table.dataTable.display tbody tr td:nth-child(2) {
             color: #24695C;
@@ -28,6 +29,15 @@
         table.dataTable.display thead 
             tr th::before, th::after {
             content: none !important;
+        }
+        
+        table.dataTable.display tbody tr td {
+            border: 0px;
+            
+        }
+        
+        table.dataTable.display thead tr th {
+            border: 0px;
         }
         
         .blog-box.blog-list a img {
@@ -220,9 +230,9 @@
                                             <div class="header-top">
                                                 <div class="setting-list bg-primary position-unset">
                                                     <ul class="list-unstyled setting-option">
-                                                        <li>
-                                                            <div class="setting-white"><i class="icon-settings"></i></div>
-                                                        </li>
+                                                        <!--<li>-->
+                                                        <!--    <div class="setting-white"><i class="icon-settings"></i></div>-->
+                                                        <!--</li>-->
                                                         <li><i class="view-html fa fa-code font-white"></i></li>
                                                         <li><i class="icofont icofont-maximize full-card font-white"></i></li>
                                                         <li><i class="icofont icofont-minus minimize-card font-white"></i></li>
@@ -253,7 +263,7 @@
                                         </div>
                                     </div>
                                     <div class="card b-r-10 m-b-0 m-t-55">
-                                        <h4 class="post-preview-title m-t-5 m-b-15 m-l-20" style="color: white; ">Run Binary Blog</h4>
+                                        <h4 class="post-preview-title m-t-5 m-b-15 m-l-20">Run Binary Blog</h4>
                                         <div class="m-b-20" style="height: 3px; background-color: #152731;"></div>
                                         <div class="row m-l-10">
                         	                <div class="col-xl-12 col-md-6 m-b-10">
@@ -310,7 +320,7 @@
                                 <div class="col-xl-6 col-xs-12 col-md-12 col-sm-12">
                                     <div class="card m-b-10">
                                         <div class="card-body pb-0">
-                                            <h4 class="card-title" style="font-weight: bold; color: white;">Resumen de Inversión </h4>
+                                            <h4 class="card-title" style="font-weight: bold;">Resumen de Inversión </h4>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <table class="table">

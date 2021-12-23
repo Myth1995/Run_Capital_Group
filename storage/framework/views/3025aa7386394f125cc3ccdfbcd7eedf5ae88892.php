@@ -1,6 +1,6 @@
     <table class="display" id="row-select-multiple">
         <thead>
-            <tr>
+            <tr style="border-left-color: rgba(36, 105, 92, 0);">
                 <th>Usuario Titular</th>
                 <th>Transacciones</th>
                 <th>Facturación</th>
@@ -12,12 +12,12 @@
         <tbody>
             <?php $__currentLoopData = $ary; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $el): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <tr>
-                <td><?php echo e($el['name']); ?></td>
+                <td style="border-left-color: rgba(36, 105, 92, 0);"><?php echo e($el['name']); ?></td>
                 <td><?php echo e($el['position']); ?></td>
                 <td><?php echo e($el['invoiceID']); ?></td>
                 <td><?php echo e($el['startDate']); ?></td>
                 <td><?php echo e($el['salary']); ?></td>
-                <td><div style="display: flex;"><img src="<?php echo e(asset('assets/images/dashboard/datatable_check.png')); ?>" alt="" height="25px"/></div></td>
+                <td><div><img src="<?php echo e(asset('assets/images/dashboard/datatable_check.png')); ?>" alt="" height="25px"/></div></td>
             </tr>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </tbody>
