@@ -18,7 +18,7 @@
     <!-- Font Awesome-->
     @includeIf('layouts.admin.partials.css')
   </head>
-  <body>
+  <body class="">
     <!-- Loader starts-->
     <div class="loader-wrapper">
       <div class="theme-loader"></div>
@@ -55,6 +55,51 @@
       </div>
     </div>
     <!-- latest jquery-->
+    <div class="modal fade modal-bookmark" id="withdrawModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cantidad</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-bookmark needs-validation" id="bookmark-form" novalidate="">
+                        <div class="form-row">
+                            <div class="form-group col-md-12 row" style="justify-content: center;">
+                                <div class="col-md-10" id="task-title" type="text" required="" autocomplete="off" >
+                                    <h6 for="task-title">mitiago2012.jjpm@gmail.com</h6>
+                                    <div>Josepalomero</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="task-title">Moneda</label>
+                                <select class="form-control">
+                                    <option>USDT Tether</option>
+                                    <option>TRX Tron</option>
+                                    <option>LTC Litecoin</option>
+                                    <option>BTC Bitcoin</option>
+                                    <option>XRP Ripple</option>
+                                    <option>BNB Binance Coin</option>
+                                    <option>DOGE Dogecoin</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="sub-task">Cantidad</label>
+                                <input class="form-control" id="sub-task" type="number" required="" autocomplete="off" />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="sub-task">Nota(optical)</label>
+                                <input class="form-control" id="sub-task" type="text" required="" autocomplete="off" />
+                            </div>
+                        </div>
+                        <input id="index_var" type="hidden" value="6" />
+                        <button class="btn btn-secondary" id="Bookmark" onclick="submitBookMark()" type="submit">Save</button>
+                        <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     @includeIf('layouts.admin.partials.js')
   </body>
 </html>

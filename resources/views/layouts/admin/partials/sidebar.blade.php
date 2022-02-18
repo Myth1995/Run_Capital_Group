@@ -37,10 +37,10 @@
         </div>
         <div style="text-align: left; margin-bottom: 10px; margin-top:15px; display: flex; justify-content: space-around;">
             <button class="btn btn-primary but-group" onClick="onDeposit()" >
-                <img class="img-15" height="15px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none; margin-right: 10px;" alt="" />
+                <img class="img-20" height="20px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none; margin-right: 10px;" alt="" />
                 Depositar</button>
-            <button class="btn btn-primary but-group">
-                <img class="img-15" height="15px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none; margin-right: 10px;" alt="" />
+            <button class="btn btn-primary but-group" data-bs-toggle="modal" data-bs-target="#withdrawModal">
+                <img class="img-20" height="20px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none; margin-right: 10px;" alt="" />
                 retirar</button>
         </div>
         <!--<div class="media-body text-start icon-state" style="display: flex;">-->
