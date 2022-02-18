@@ -15,3 +15,39 @@
 <script src="{{asset('assets/js/script.js')}}"></script>
 <script src="{{asset('assets/js/theme-customizer/customizer.js')}}"></script>
 <!-- Plugin used-->
+
+<script src="{{asset('assets/js/photoswipe/photoswipe.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe-ui-default.min.js')}}"></script>
+<script src="{{asset('assets/js/photoswipe/photoswipe.js')}}"></script>
+
+<script>
+    function onDeposit() {
+        window.location.href = "{{ route('deposit')}}";
+    }
+    
+    var target = document.getElementById("dropmenu2");
+    
+    target.addEventListener("mouseover", mOver2, false);
+    target.addEventListener("mouseout", mOut2, false);
+    
+    function mOver2() {
+       target.classList.add("active")
+    }
+    
+    function mOut2() {  
+       target.classList.remove("active")
+    }
+    
+    target3 = document.getElementById("dropmenu3");
+    
+    target3.addEventListener("mouseover", mOver3, false);
+    target3.addEventListener("mouseout", mOut3, false);
+    
+    function mOver3() {
+       target3.classList.add("active")
+    }
+    
+    function mOut3() {  
+       target3.classList.remove("active")
+    }
+</script>

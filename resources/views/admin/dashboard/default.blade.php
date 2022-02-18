@@ -32,7 +32,6 @@
         
         table.dataTable.display tbody tr td {
             border: 0px;
-            
         }
         
         table.dataTable.display thead tr th {
@@ -75,7 +74,15 @@
         .dataTables_length#row-select-multiple_length {
             display: none;
         }
-    }
+        
+        .detail .part-title {
+            color: #bebebe;
+        }
+        
+        .detail .part-content {
+            font-weight: bold;
+            font-size: 18px;
+        }
 </style>
 @endpush
     @section('content')
@@ -232,18 +239,18 @@
                                                         <!--<li>-->
                                                         <!--    <div class="setting-white"><i class="icon-settings"></i></div>-->
                                                         <!--</li>-->
-                                                        <li><i class="view-html fa fa-code font-white"></i></li>
-                                                        <li><i class="icofont icofont-maximize full-card font-white"></i></li>
-                                                        <li><i class="icofont icofont-minus minimize-card font-white"></i></li>
-                                                        <li><i class="icofont icofont-refresh reload-card font-white"></i></li>
-                                                        <li><i class="icofont icofont-error close-card font-white"></i></li>
+                                                        <!--<li><i class="view-html fa fa-code font-white"></i></li>-->
+                                                        <!--<li><i class="icofont icofont-maximize full-card font-white"></i></li>-->
+                                                        <!--<li><i class="icofont icofont-minus minimize-card font-white"></i></li>-->
+                                                        <!--<li><i class="icofont icofont-refresh reload-card font-white"></i></li>-->
+                                                        <!--<li><i class="icofont icofont-error close-card font-white"></i></li>-->
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-body text-center p-t-0 p-b-10">
-                                            <h3 class="font-light">Welcome Back, John!!</h3>
-                                            <p>We are glad that you are visite this dashboard. we will be happy to help you grow your business.</p>
+                                            <h3 class="font-light">Bienvenido de nuevo, Juan!!</h3>
+                                            <!--<p>We are glad that you are visite this dashboard. we will be happy to help you grow your business.</p>-->
                                         </div>
                                         <div class="confetti">
                                             <div class="confetti-piece"></div>
@@ -263,7 +270,7 @@
                                     </div>
                                     <div class="card b-r-10 m-b-0 m-t-55">
                                         <h4 class="post-preview-title m-t-5 m-b-15 m-l-20">Run Binary Blog</h4>
-                                        <div class="m-b-20" style="height: 3px; background-color: #152731;"></div>
+                                        <div class="m-b-20 card" style="height: 1px;"></div>
                                         <div class="row m-l-10">
                         	                <div class="col-xl-12 col-md-6 m-b-10">
                     	                        <div class="blog-box blog-list col-md-12">
@@ -363,23 +370,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="card m-t-10 m-l-10 p-10">
-                                        <h5 style="font-weight: bold; color: white;">Atención al Cliente</h5>
-                                        <div class="recipient-body">
-                                            <div style="display: flex;">
-                                                <img class="img-60 rounded-circle" src="{{asset('assets/images/dashboard/telephone/auriculares.png')}}" style="height: 60px;" alt="#">
-                                                <div class="m-l-10">
-                                                    <h6>Asistencia</h6>
-                                                    <div>info@example.com</div>
-                                                </div>
+                                <div class="card m-t-10 p-10">
+                                    <h5 style="font-weight: bold; ">Atención al Cliente</h5>
+                                    <div class="recipient-body">
+                                        <div style="display: flex;">
+                                            <img class="img-40 rounded-circle" src="{{asset('assets/images/dashboard/telephone/auriculares.png')}}" style="height: 40px;" alt="#">
+                                            <div class="m-l-10">
+                                                <h6>Asistencia</h6>
+                                                <div style="font-size: 12px;">runcapitalgroup@gmail.com</div>
                                             </div>
-                                            <div class="p-10 b-r-10" style="display: flex; border: 2px solid #24695C;">
-                                                <img class="img-40 m-r-10" src="{{asset('assets/images/dashboard/telephone/tel-icon.png')}}" style="height: 40px;" alt="#">
-                                                <!--<i class="icofont icofont-telephone m-r-10" style="font-size: 30px; color: #1F695C;"></i>-->
-                                                <div style="font-size: 11px; color: #1F695C">
-                                                    <div>Telepon</div>
-                                                    <div>+91 123-456-7890</div>
-                                                </div>
+                                        </div>
+                                        <div class="p-10 b-r-10" style="display: flex; border: 2px solid #24695C;">
+                                            <img class="img-30 m-r-10" src="{{asset('assets/images/dashboard/telephone/tel-icon.png')}}" style="height: 30px;" alt="#">
+                                            <!--<i class="icofont icofont-telephone m-r-10" style="font-size: 30px; color: #1F695C;"></i>-->
+                                            <div style="font-size: 9px; color: #1F695C">
+                                                <div>Whatsapp</div>
+                                                <div>+1 809 461 8099</div>
                                             </div>
                                         </div>
                                     </div>
@@ -387,6 +393,57 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="col-xl-12 xl-100 box-col-12 detail card">
+                  <div class="row">
+                    <div class='col-md-6 p-l-45 p-t-45'>
+                        <h5 class='b-b-info p-b-5'>Datos de la Empresa</h5>
+                        <div class="d-flex">
+                            <div class="col-md-4">
+                                <p class='part-title'>Maximo diario</p>
+                                <p class='part-content'>22,3234$</p>
+                                <p class='part-title'>Maximo anual</p>
+                                <p class='part-content'>116,4225$</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p class='part-title'>Minimo diario</p>
+                                <p class='part-content'>11,3234$</p>
+                                <p class='part-title'>Minimo anual</p>
+                                <p class='part-content'>14,4225$</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p class='part-title'>Volatilidad(1M)</p>
+                                <p class='part-content'>22,3234$</p>
+                                <p class='part-title'>Cap. de mercado</p>
+                                <p class='part-content'>1.5B $</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-6'>
+                        <div class="chart-widget-top">
+                            <div>
+                              <!--<h5 class="p-t-50">Whatsapp +1 809 461 8099</h5>-->
+                              <!--<div class="main-header-left">-->
+                              <!--  <div class="logo-wrapper"><a href="{{ route('index') }}"><img class="" src="{{asset('assets/images/logo/logo.png')}}" alt="" style="height: 85px;"></a></div>-->
+                              <!--  <div class="dark-logo-wrapper"><a href="{{ route('index') }}"><img class="" src="{{asset('assets/images/logo/dark-logo.png')}}" alt="" style="height: 85px;"></a></div>-->
+                                <!--<div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle">    </i></div>-->
+                              <!--</div>-->
+                              <div id="chart-widget1" style='width: 500px; '></div>
+                              <div class="card-body">
+                                  <div>
+                                    <h4 class="num total-value">$ <span class="counter">3654</span>.00</h4>
+                                  </div>
+                                  <div class="col-5 d-flex">
+                                    <h6 class="f-w-600 font-primary">+$2,3247</h6>
+                                    <span class="num">&nbsp;&nbsp;(<span class="">+11.84</span>%<i class="icon-angle-up f-12"></i>)</span>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
                 
                 <div class="col-xl-12 xl-100 box-col-12">
                     <div class="card">
@@ -454,5 +511,11 @@
         <script src="{{asset('assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
         <script src="{{ asset('assets/js/datatable/datatables/jquery.dataTables.min.js') }}"></script>
         <script src="{{ asset('assets/js/datatable/datatables/datatable.custom.js') }}"></script>
+        
+        <script src="{{asset('assets/js/chart/apex-chart/moment.min.js')}}"></script>
+        <script src="{{asset('assets/js/chart/apex-chart/apex-chart.js')}}"></script>
+        <script src="{{asset('assets/js/chart/apex-chart/stock-prices.js')}}"></script>
+        <script src="{{asset('assets/js/chart-widget.js')}}"></script>
+
     @endpush
 @endsection
