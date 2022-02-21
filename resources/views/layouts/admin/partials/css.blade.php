@@ -72,8 +72,8 @@
     
     .main-nav .sidebar-user .but-group{
         padding: 5px 8px;
-        font-size: 10px;
-        width: 100px;
+        font-size: 12px;
+        width: 112px;
         height: 35px;
     }
     
@@ -145,5 +145,4 @@
     .nav-menu .dropdown.active .nav-link .fa-angle-right {
         display: none;
     }
-
 </style>
