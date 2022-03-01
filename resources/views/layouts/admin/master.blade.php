@@ -73,7 +73,7 @@
         /*}*/
         
         .modal-dialog .number-wrapper input {
-            width: 90%;
+            width: 87%;
             border: none;
             margin-right: 5px;
             height: 95%;
@@ -83,6 +83,50 @@
         /*  -webkit-appearance: none;*/
         /*}*/
     </style>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+    <script>
+        var ddData = [
+            {
+                text: "Facebook",
+                value: 1,
+                selected: false,
+                description: "Description with Facebook",
+                imageSrc: "https://i.imgur.com/XkuTj3B.png"
+            },
+            {
+                text: "Twitter",
+                value: 2,
+                selected: false,
+                description: "Description with Twitter",
+                imageSrc: "https://i.imgur.com/8ScLNnk.png"
+            },
+            {
+                text: "LinkedIn",
+                value: 3,
+                selected: true,
+                description: "Description with LinkedIn",
+                imageSrc: "https://i.imgur.com/aDNdibj.png"
+            },
+            {
+                text: "Foursquare",
+                value: 4,
+                selected: false,
+                description: "Description with Foursquare",
+                imageSrc: "https://i.imgur.com/kFAk2DX.png"
+            }
+        ];
+        $('#myDropdown').ddslick({
+            data: ddData,
+            width: 300,
+            imagePosition: "left",
+            selectText: "Select your favorite social network",
+            onSelected: function (data) {
+                console.log(data);
+            }
+        });
+    </script>
   </head>
   <body class="">
     <!-- Loader starts-->
@@ -123,17 +167,17 @@
     <!-- latest jquery-->
     <div class="modal fade modal-bookmark" id="withdrawModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="width: 70%; margin: auto;">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel" style="width: 100%; text-align: center;">Cantidad</h3>
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content" style="width: 50%; margin: auto;">
+                <div class="modal-header" style="border: none;">
+                    <h3 class="modal-title" id="exampleModalLabel" style="width: 100%; text-align: center;">Retirar</h3>
+                    <!--<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>-->
                 </div>
                 <div class="modal-body">
                     <form class="form-bookmark needs-validation" id="bookmark-form" novalidate="">
                         <div class="form-row">
                             <div class="form-group col-md-12" style="justify-content: center; background-color: rgba(200, 200, 200, 0.2); display: flex;">
-                                <div>
-                                    <img src="{{asset('assets/images/sidebar/perfil-del-usuario.png')}}" width='40' height='40' alt='' style='margin: auto;' />
+                                <div class="px-2" style="margin: auto;">
+                                    <img src="{{asset('assets/images/sidebar/perfil-del-usuario.png')}}" width='40' height='40' alt='' />
                                 </div>
                                 <div class="py-2" id="task-title" type="text" required="" autocomplete="off" style="margin: auto; width: 96%;">
                                     <h6 for="task-title">mitiago2012.jjpm@gmail.com</h6>
@@ -141,8 +185,8 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="task-title">Moneda</label>
-                                <select class="form-select" required="">
+                                <label for="task-title">Metodo de Pago</label>
+                                <select class="form-select" required="" style="background-image: none;">
                                     <option><img src="{{asset('assets/images/dashboard/deposit/atar.png')}}" width='40' height="40" alt="USDT" />USDT</option>
                                     <option>TRX Tron</option>
                                     <option>LTC Litecoin</option>
@@ -152,6 +196,16 @@
                                     <option>DOGE Dogecoin</option>
                                 </select>
                             </div>
+                            <!--<select id="demo-htmlselect">-->
+                            <!--    <option value="0" data-thumbnail="{{asset('assets/images/sidebar/perfil-del-usuario.png')}}"-->
+                            <!--        data-description="Description with Facebook">Facebook</option>-->
+                            <!--    <option value="1" data-thumbnail="https://i.imgur.com/8ScLNnk.png"-->
+                            <!--        data-description="Description with Twitter">Twitter</option>-->
+                            <!--    <option value="2" selected="selected" data-thumbnail="https://i.imgur.com/aDNdibj.png"-->
+                            <!--        data-description="Description with LinkedIn">LinkedIn</option>-->
+                            <!--    <option value="3" data-thumbnail="https://i.imgur.com/kFAk2DX.png"-->
+                            <!--        data-description="Description with Foursquare">Foursquare</option>-->
+                            <!--</select>-->
                             
                             <!--<div class="btn-group">-->
                             <!--    <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="onClickCurUnit()">-->
@@ -179,21 +233,23 @@
                                 <label for="sub-task">Cantidad</label>
                                 <div class="number-wrapper">
                                     <input type="number" placeholder="Ingresa la cantidad" required="" autocomplete="off" />
-                                    USDT
+                                    USD
                                 </div>
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="sub-task">Nota(optical)</label>
+                                <label for="sub-task">Billetera de Pago</label>
                                 <div class="number-wrapper">
-                                    <input type="text" placeholder="Ingresa la cantidad" required="" maxLength="50" autocomplete="off" />
-                                    <span>0/50</span>
+                                    <input type="text" placeholder="Ingresa la cantidad" required="" maxLength="50" autocomplete="off" style="width: 97%;" />
                                 </div>
                             </div>
                         </div>
                         <input id="index_var" type="hidden" value="6" />
                         <div class="row" style="justify-content: space-around;">
-                            <button class="btn col-md-5" id="Bookmark" style="background-color: #c4c4c4;" onclick="submitBookMark()" type="submit">Paso anterior</button>
-                            <button class="btn col-md-5" style="background-color: #f3ebae;" type="button" data-bs-dismiss="modal">Continuar</button>
+                            <button class="btn btn-info col-md-5" style=""  type="button" data-bs-dismiss="modal">Cancelar</button>
+                            <button class="btn btn-primary col-md-5" id="Bookmark" style="" type="submit" onclick="submitBookMark()">Confirmar</button>
+                        </div>
+                        <div class="p-t-20" style="text-align: center; font-size: 18px; color: #c3c3c3;">
+                            Powered By BINANCE PAY
                         </div>
                     </form>
                 </div>
@@ -201,18 +257,6 @@
         </div>
     </div>
     @includeIf('layouts.admin.partials.js')
-    <script>
-        function onClickCurUnit() {
-            $('#dropdown-menu')[0].style.display = $('#dropdown-menu')[0].style.display == 'block' ? 'none' : 'block';
-        }
-        
-        $('.input-cond')[0].keyup(updateCount);
-        $('.input-cond')[0].keydown(updateCount);
-        
-        function updateCount() {
-            var cs = $(this).val().length;
-            $('#characters').text(cs);
-        }
-    </script>
+    
   </body>
 </html>

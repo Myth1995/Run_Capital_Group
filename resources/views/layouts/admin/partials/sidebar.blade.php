@@ -36,11 +36,11 @@
             <span class="percent">-25.0%</span>
         </div>
         <div style="text-align: left; margin-bottom: 10px; margin-top:15px; display: flex; justify-content: space-around;">
-            <button class="btn btn-primary but-group" onClick="onDeposit()" >
-                <img class="img-20" height="20px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none; margin-right: 10px;" alt="" />
+            <button class="btn btn-primary but-group" onClick="onDeposit()" style="margin-right: 20px;" >
+                <img class="img-20" height="20px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none;" alt="" />
                 Depositar</button>
             <button class="btn btn-primary but-group" data-bs-toggle="modal" data-bs-target="#withdrawModal">
-                <img class="img-20" height="20px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none; margin-right: 10px;" alt="" />
+                <img class="img-20" height="20px" src="{{asset('assets/images/sidebar/billetera.png')}}" style="border: none;" alt="" />
                 retirar</button>
         </div>
         <!--<div class="media-body text-start icon-state" style="display: flex;">-->
@@ -84,7 +84,7 @@
                         </div>
                     </li>
                     <li class="sidebar-gif">
-                        <img src="{{asset('assets/images/sidebar/220x260 T.G.gif')}}" width="220" height="260" alt="" style="width: 100%;" />
+                        <img src="{{asset('assets/images/sidebar/Comp 6_3.gif')}}" width="220" height="260" alt="" style="width: 100%;" />
                         <!--<video class='video-panel' width="250" height="240" controls>-->
                         <!--  <source src="{{asset('assets/video/WhatsApp Video 2022-02-09 at 07.24.38.mp4')}}" type="video/mp4">-->
                         <!--  Your browser does not support the video tag.-->

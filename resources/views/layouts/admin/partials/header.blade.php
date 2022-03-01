@@ -46,6 +46,7 @@
                     <!--</li>-->
                     <!--<li>-->
                         <a href="{{route('refferal')}}" class="{{routeActive('refferal')}}">Referencias</a>
+                        <a href="{{route('blogpage')}}" class="{{routeActive('blogpage')}}">Blog</a>
                     </div>
                     <!--</li>-->
                 </ul>
