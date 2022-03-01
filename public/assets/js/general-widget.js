@@ -50,7 +50,7 @@ var echart_dashboard = {
         },
         series: [
             {
-                name: 'Sessions',
+                name: 'Retornos',
                 type: 'pie',
                 radius: ['60%', '70%'],
                 avoidLabelOverlap: false,
