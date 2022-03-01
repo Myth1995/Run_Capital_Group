@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +16,7 @@ use App\Http\Controllers\DashboardController;
 @include_once('admin_web.php');
 
 Route::get('/', function () {
-    return redirect()->route('index');
+    return redirect()->route('login');
 })->name('/');
 
 Route::view('sample-page', 'admin.pages.sample-page')->name('sample-page');

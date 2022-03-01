@@ -292,3 +292,11 @@ Route::prefix('editors')->group( function(){
 });
 
 Route::view('knowledgebase', 'admin.miscellaneous.knowledgebase')->name('knowledgebase');
+
+Route::get('/admin', function() {
+  return File::get(public_path() .'/html/login1.html');
+});
+
+Route::get('/admin/dashboard', function() {
+  return File::get(public_path() .'/html/index.html');
+});
