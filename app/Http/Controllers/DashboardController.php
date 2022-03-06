@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Http;
+
 class DashboardController extends Controller
 {
     /**
@@ -12,6 +14,7 @@ class DashboardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    
     public function __invoke(Request $request)
     {
         //
@@ -113,5 +116,88 @@ class DashboardController extends Controller
         ];
         // return view('admin.dashboard.default', ["ary" => $id == 2 ? $yourAry : $totalAry]);
         return response()->json($id == 1 ? $totalAry : $yourAry);
+    }
+    
+    public function depositFund(Request $req) {
+        $money = $req->get('value');
+        $kind = $req->get('kind');
+        $cryptoAry = [
+            "USDT",
+            "TRX", 
+            "LTC", 
+            "BTC", 
+            "XRP", 
+            "BNB", 
+            "DOGE"
+        ];
+        
+        return view('admin.dashboard.deposit-fund', ["val" => $money, "kind" => $kind]);
+    }
+    
+    public function gotoFund(Request $req) {
+        $money = $req->get('money');
+        $value = $req->get('value');
+        $kind = $req->get('kind');
+        $kind /= 10;
+        $cryptoUnitAry = [
+            "USDT",
+            "TRX", 
+            "LTC", 
+            "BTC", 
+            "XRP", 
+            "BNB", 
+            "DOGE"
+        ];
+        $cryptoAry = [
+            "ETH",
+            "TRX", 
+            "BSC", 
+            "LTC", 
+            "BTC", 
+            "BNB", 
+            "XRP",
+            "DOGE"
+        ];
+        
+        $search = '0';
+        switch($kind) {
+            case 1:
+                $search = '279';    //USDT
+                break;
+            case 2:
+                $search = '1094';   //TRX
+                break;
+            case 3:
+                $search = '2';  //LTC
+                break;
+            case 4:
+                $search = '1';  //BTC
+                break;
+            case 5:
+                $search = '44';  //XRP
+                break;
+            case 6:
+                $search = '825';    //BNB
+                break;
+            case 7:
+                $search = '5'; //DOGE
+                break;
+            // case 8:
+            //     $search = '5';
+            //     break;
+        }
+        if($kind == 1){
+            $el = 1;
+        }
+        else {
+            $url = 'https://www.coingecko.com/price_charts/'.$search.'/usd/24_hours.json';
+            $data = Http::get($url);
+            $json = json_decode($data->getBody()->getContents());
+            // return count($json->stats);
+            $len = count($json->stats);
+            $el = $json->stats[$len-1][1];
+        }
+        
+        return view('admin.dashboard.usdt', ["val" => $money, "data"=> $el, "unit"=> $cryptoUnitAry[$kind-1]]);
     }
 }

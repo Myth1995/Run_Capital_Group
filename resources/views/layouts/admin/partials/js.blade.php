@@ -22,7 +22,7 @@
 
 <script>
     function onDeposit() {
-        window.location.href = "{{ route('deposit')}}";
+        window.location.href = ("/dashboard/deposit");
     }
     
     var target = document.getElementById("dropmenu2");
