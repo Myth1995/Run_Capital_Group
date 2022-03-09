@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\DashboardController;
 
 Route::prefix('admin')->group(function () {
 });
@@ -9,8 +10,13 @@ Route::prefix('admin')->group(function () {
 Route::prefix('dashboard')->group(function () {
 	Route::view('dashboard-02', 'admin.dashboard.dashboard-02')->name('dashboard-02');
 	Route::view('notification-panel', 'admin.notifications.notification-panel')->name('notification-panel');
-	Route::view('depoist', 'admin.dashboard.deposit')->name('deposit');
+	Route::view('deposit', 'admin.dashboard.deposit')->name('deposit');
+// 	Route::view('depoist-fund', 'admin.dashboard.deposit-fund')->name('deposit-fund');
+	Route::get('deposit-fund', [DashboardController::class, 'depositFund'])->name('deposit-fund');
 	Route::view('blogpage', 'admin.dashboard.blog')->name('blogpage');
+// 	Route::view('usdt', 'admin.dashboard.usdt')->name('usdt');
+    Route::get('fund', [DashboardController::class, 'gotoFund']);
+    Route::get('send', [DashboardController::class, 'gotoSend']);
 });
 
 Route::prefix('widgets')->group(function () {
@@ -299,4 +305,12 @@ Route::get('/admin', function() {
 
 Route::get('/admin/dashboard', function() {
   return File::get(public_path() .'/html/index.html');
+});
+
+Route::get('/admin/deposit', function() {
+    return File::get(public_path().'/html/deposit.html');
+});
+
+Route::get('/admin/withdraw', function() {
+    return File::get(public_path().'/html/withdraw.html');
 });
