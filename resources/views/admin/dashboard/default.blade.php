@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/whether-icon.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/datatables.css')}}">
 <style>
-        table.dataTable.display tbody tr td:first-child, td:nth-child(5) {
+        .dark-only table.dataTable.display tbody tr td:first-child, td:nth-child(5) {
             font-weight: bold;
             border-left: 1px solid #111727;
         }
@@ -36,6 +36,7 @@
         
         table.dataTable.display thead tr th {
             border: 0px;
+            color: #bbb;
         }
         
         .blog-box.blog-list a img {
@@ -83,77 +84,20 @@
             font-weight: bold;
             font-size: 18px;
         }
+        
+        #circle {
+          width: 7px;
+          height: 9px;
+          margin-right: 5px;
+          margin-top: 6px;
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          border-radius: 7px;
+          background: #24695c;
+        }
 </style>
 @endpush
     @section('content')
-        @php
-            $totalAry = [
-                [
-                    "name" => "Tiger Nixon",
-                    "position" => "System Architect",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2011/04/25",
-                    "salary" => "$320,800",
-                ],
-                [
-                    "name" => "Garrett Winters",
-                    "position" => "Accountant",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2011/07/25",
-                    "salary" => "$170,750",
-                ],
-                [
-                    "name" => "Ashton Cox",
-                    "position" => "Junior Technical Author",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2009/01/12",
-                    "salary" => "$86,000",
-                ],
-                [
-                    "name" => "Cedric Kelly",
-                    "position" => "Senior Javascript Developer",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2012/03/29",
-                    "salary" => "$433,060",
-                ],
-                [
-                    "name" => "Airi Satou",
-                    "position" => "Accountant",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2008/11/28",
-                    "salary" => "$162,700",
-                ],
-                [
-                    "name" => "Brielle Williamson",
-                    "position" => "Integration Specialist",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2012/12/02",
-                    "salary" => "$372,000",
-                ],
-                [
-                    "name" => "Haley Kennedy",
-                    "position" => "Senior Marketing Designer",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2012/12/18",
-                    "salary" => "$313,500",
-                ],
-                [
-                    "name" => "Tatyana Fitzpatrick",
-                    "position" => "Regional Director",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2010/03/17",
-                    "salary" => "$385,750",
-                ],
-                [
-                    "name" => "Michael Silva",
-                    "position" => "Marketing Designer",
-                    "invoiceID" => "#123412451",
-                    "startDate" => "2012/11/27",
-                    "salary" => "$198,500",
-                ]
-            ];
-            $ary = $totalAry;
-        @endphp
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-6 col-xl-3 col-lg-6">
@@ -455,8 +399,8 @@
                 	                </div>
                 	                <div style="display: flex; padding-left: 30px; position: absolute; top: 60px; z-index: 8;">
                 	                    <ul class="nav nav-tabs border-tab" id="top-tab" role="tablist">
-                                          <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="true" onClick="tableShow(1)" style="padding-left: 0px;">Transacciones Generales</a></li>
-                                          <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false" onClick="tableShow(2)">Mis Propias Transacciones</a></li>
+                                          <li class="nav-item"><a class="nav-link active" id="top-home-tab" data-bs-toggle="tab" href="#top-home" role="tab" aria-controls="top-home" aria-selected="false" onClick="tableShow(1)" style="padding-left: 0px;">Transacciones Generales</a></li>
+                                          <li class="nav-item"><a class="nav-link" id="profile-top-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="true" onClick="tableShow(2)">Mis Propias Transacciones</a></li>
                                         </ul>
         	                            <!--<button class="btn btn-primary mb-3 m-r-10" onClick="tableShow(1)">Transacciones Generales</button>-->
                                         <!-- <a class="btn btn-success" href="{{ url('table-data/2') }}" >Transacciones Generales</a> -->
@@ -474,19 +418,26 @@
                 </div>
             </div>
         </div>
-
+        </div>
     @push('scripts')    
         <script type="text/javascript">
-            // $(document).ready(function() {
-            //     tableShow()
-            // });
+            $(document).ready(function() {
+                if(document.URL.includes("top-profile")) {
+                    console.log("before");
+                    window.scrollTo(0, document.body.scrollHeight+100);
+                    console.log("after");
+                    $('.nav.nav-tabs .nav-link')[0].className = "nav-link";
+                    $('.nav.nav-tabs .nav-link')[1].className = "nav-link active";
+                    tableShow(2);
+                }
+            });
             function tableShow(i) {
                 $.get('/table-data/'+i, function(result) {
                     $('div.table-responsive table tbody').empty();
                     $('div.table-responsive table tbody').fadeOut();
                     let data = result;
                     data.map(function(value, index) {
-                        let tr = $("<tr><td>"+data[index].name+"</td><td>"+data[index].position+"</td><td>"+data[index].invoiceID+"</td><td>"+data[index].startDate+"</td><td>"+data[index].salary+`</td><td><img src="{{asset('assets/images/dashboard/datatable_check.png')}}" alt="" height="20px"/></td></tr>`);
+                        let tr = $("<tr><td><b>"+data[index].startDate+"</b></td><td><b>"+data[index].type+"</b></td><td>"+data[index].name+"</td><td><b>"+data[index].salary+"</b></td><td>"+data[index].unit+`</td><td style="display: flex;"><div id="circle"></div><b>Completado</b></td></tr>`);
                         $('div.table-responsive table tbody').append(tr);
                     });
                     $('div.table-responsive table tbody').fadeIn();

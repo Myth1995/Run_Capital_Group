@@ -26,10 +26,10 @@ class CustomAuthController extends Controller
    
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                        ->withSuccess('Signed in');
+            return view('admin.authentication.loading');
+            // return redirect()->intended('dashboard')
+            //             ->withSuccess('Signed in');
         }
-  
         return redirect("login")->withSuccess('Login details are not valid');
     }
 
@@ -43,14 +43,12 @@ class CustomAuthController extends Controller
 
     public function customRegistration(Request $request)
     {  
-        echo "before";
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
-           echo "after";
+           
         $data = $request->all();
         $check = $this->create($data);
          

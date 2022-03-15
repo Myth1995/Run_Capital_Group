@@ -44,13 +44,14 @@
         
         .commerce .transaction .price .input-info img {
             position: absolute;
-            top: 7px;
-            right: 17px;
-            width: 20px;
+            top: 9px;
+            right: 19px;
+            width: 16px;
+            color: #707A8A;
         }
         
         .commerce .transaction .price .input-info .tooltiptext:after {
-            border-color: #999 transparent transparent transparent;
+            border-color: #707A8A transparent transparent transparent;
         }
         
         .commerce .transaction .price .addr {
@@ -121,14 +122,19 @@
                             </i>
                         </div>
                         <div class="row m-t-10">
-                            <div class="col-sm-9 f-16 input-info" style="text-align: left;">
-                                <input class="form-control" type="text" placeholder="Introduce el Id.de transaccion" />
-                                <img src="{{asset('assets/images/dashboard/deposit/fund/info-24.png')}}" onmouseover="onImgOver()" onmouseout="onImgOut()"/>
-                                <span class="tooltiptext" id="tooltiptext" style="left: 91%; visibility: hidden; background-color: #999;" >Information</span>
-                            </div>
-                            <div class="col-sm-3" id="countdown-time">
-                                29m 59s
-                            </div>
+                            <form class="needs-validation" novalidate="" style="position: relative; display: flex;">
+                                <div class="col-sm-9 f-16 input-info" style="text-align: left;">
+                                    <input class="form-control" type="text" id="input-value" placeholder="Introduce el Id.de transaccion" style="padding-left: 55px; " required="" />
+                                    <img src="{{asset('assets/images/dashboard/deposit/fund/info-25.png')}}" onmouseover="onImgOver()" onmouseout="onImgOut()"/>
+                                    <span class="tooltiptext" id="tooltiptext" style="left: 91%; bottom: 91%; visibility: hidden; background-color: #707A8A;" >Information</span>
+                                    
+                                </div>
+                                <div class="col-sm-3" id="countdown-time">
+                                    29m 59s
+                                </div>
+                                <button class="btn btn-pay" id="trans-addr" type="button" onclick="onPay()" style="position: absolute; right: 12px; top: 66px;">He pagado</button>
+                            </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -138,44 +144,53 @@
                     <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"><img src="{{asset('assets/images/dashboard/deposit/right-cross.png')}}" class="m-10" width='20' height="30" alt="Before" style="transform: rotate(180deg);" />Cambiar Detalles</a>
                 </div>
                 <div>
-                    <button class="btn btn-pay" id="trans-addr" onclick="onPay()">He pagado</button>
+                    <!--<button class="btn btn-pay" id="trans-addr" onclick="onPay()">He pagado</button>-->
                     <div class="modal" id="confirmModalCenter">
                         <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content py-3" style="width: 75%; margin: auto;">
+                            <div class="modal-content pb-3" style="width: 85%; margin: auto;">
+                                <div class="modal-header" style="border: none;">
+                                    <!--<h5 class="modal-title">Modal title</h5>-->
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
                                 <div style=" display: flex; flex-direction: column; width: 100%; margin: auto;">
-                                    <div class="mb-3" style="margin: auto;">
-                                        <img src="{{asset('assets/images/dashboard/deposit/send/sand-clock1.png')}}" width=100 height=100 alt="" />
+                                    <div class="m-b-10" style="margin: auto;">
+                                        <img src="{{asset('assets/images/dashboard/deposit/send/sand-clock.png')}}" width=100 height=100 alt="" />
                                     </div>
                                     <div class="m-b-10" style="font-size: 17px; margin: auto;">
-                                        <span>Pago pendiente</span>
+                                        <span>Esperando aprobancion</span>
                                     </div>
-                                    <div class="m-b-20" style="margin: auto;">
-                                        <h2><b>
-                                            <span style="font-size: 40px;">{{$val}}</span>&nbsp;<span style="font-size: 24px;">{{$unit}}</span>
-                                        </b></h2>
-                                    </div>
-                                    <div class="trans-info px-4 py-4" style="margin: auto; width: 90%; background-color: #DDDDDD;">
-                                        <div class="info">
-                                            <label>Hacia</label>
-                                            <span>soldavilada@gmail.com</span>
-                                        </div>
+                                    <!--<div class="m-b-20" style="margin: auto;">-->
+                                        <!--<h2><b>-->
+                                        <!--    <span style="font-size: 40px;">{{$val}}</span>&nbsp;<span style="font-size: 24px;">{{$unit}}</span>-->
+                                        <!--</b></h2>-->
+                                    <!--</div>-->
+                                    <div class="trans-info p-2" style="margin: auto; width: 90%;">
+                                        <div style="text-align: center;">Estamos revisando tu solicitud de retiro y tardaremos, aproximadamente, 12 horas. Puedes consultar el estado de tu
+                                        solicitud de retiro en la pagina del historial de retiros.</div>
+                                        <!--<div class="info">-->
+                                        <!--    <label>Hacia</label>-->
+                                        <!--    <span>soldavilada@gmail.com</span>-->
+                                        <!--</div>-->
                                         
-                                        <div class="info">
-                                            <label>Fecha</label>
-                                            <span><?php echo date("Y-m-d H:i:s"); ?></span>
-                                        </div>
+                                        <!--<div class="info">-->
+                                        <!--    <label>Fecha</label>-->
+                                        <!--    <span><?php echo date("Y-m-d H:i:s"); ?></span>-->
+                                        <!--</div>-->
                                         
-                                        <div class="info">
-                                            <label>Metodo de Pago</label>
-                                            <span>Biletera de fondos</span>
-                                        </div>
+                                        <!--<div class="info">-->
+                                        <!--    <label>Metodo de Pago</label>-->
+                                        <!--    <span>Biletera de fondos</span>-->
+                                        <!--</div>-->
                                         
-                                        <div class="info">
-                                            <label>Modena</label>
-                                            <span>{{$val}}&nbsp;&nbsp;{{$unit}}</span>
-                                        </div>
+                                        <!--<div class="info">-->
+                                        <!--    <label>Modena</label>-->
+                                        <!--    <span>{{$val}}&nbsp;&nbsp;{{$unit}}</span>-->
+                                        <!--</div>-->
                                     </div>
                                 </div>
+                                <div style="display: flex;">
+                                        <button type="button" class="btn btn-success btn-lg" style="margin: auto; width: 90%; color: white;" onclick="onComplete()" >Completar</button>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -236,10 +251,10 @@
             }, 1000);
             
             var dd = document.getElementById("confirmModalCenter");
-            
+            var trans_addr = document.getElementById("trans-addr").value;
             function onPay() {
-                var trans_addr = document.getElementById("trans-addr").value;
-                // debugger;
+                
+                
                 // if(trans_addr.length == 0) {
                 //     alert("Invalid text!");
                 //     return;
@@ -248,23 +263,49 @@
                 var unit = {!! json_encode($unit) !!};
                 // window.location.href = ('/dashboard/send?money='+money+'&unit='+unit);
                 
-                dd.style="display: block; background-color: rgba(100, 100, 100, 0.7);"
+                const input = document.getElementById('input-value');
+                input.style="border: none;";
+                if(input.value.length > 0) {
+                    dd.style="display: block; background-color: rgba(100, 100, 100, 0.7);"
+                }
+                else {
+                    input.style="border: 1.4px solid red;";
+                }
             }
             
             function onImgOver() {
-                document.getElementById("tooltiptext").style = "visibility: visible; left: 91%; background-color: #999;";
+                document.getElementById("tooltiptext").style = "visibility: visible; left: 91%; bottom:91%; background-color: #707A8A;";
             }
             
             function onImgOut() {
-                document.getElementById("tooltiptext").style = "visibility: hidden; left: 91%; background-color: #999;";
+                document.getElementById("tooltiptext").style = "visibility: hidden; left: 91%; bottom:91%; background-color: #707A8A;";
             }
             
             $(document).ready(function() {
                 $("#confirmModalCenter").click(function(e) {
                     dd.style="display: none;";
-                    // window.location.href = ('/dashboard');
+                    // window.location.replace('/dashboard#top-profile');
                 });
             });
+            
+            function onComplete() {
+                window.location.replace('/dashboard#top-profile');
+            }
+            
+            const input = document.getElementById('input-value');
+
+            input.addEventListener('input', updateValue);
+            
+            function updateValue(e) {
+                var trans_btn = document.getElementById("trans-addr");
+                if(e.target.value.length > 0) {
+                    input.style="border: none;";
+                    // trans_btn.disabled = false;
+                }
+                else {
+                    // trans_btn.disabled = true;
+                }
+            }
         </script>
     @endpush
 @endsection

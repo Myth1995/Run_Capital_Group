@@ -185,7 +185,7 @@
         					</select>
         				</div>
     				</div>
-    				<button class="btn depo-btn" style="height: 70%; margin-top: 25px;" id="deposit" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" disabled>Depositar</button>
+    				<button class="btn btn-primary-light" style="height: 70%; margin-top: 25px;" id="deposit" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" disabled>Depositar</button>
     				<!--<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Vertically centered</button>-->
                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -232,7 +232,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(10)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(10)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -243,7 +243,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(20)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(20)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -254,7 +254,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(30)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(30)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -265,7 +265,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(40)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(40)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -276,7 +276,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(50)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(50)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -287,7 +287,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(60)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(60)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -298,7 +298,7 @@
         					<td class="green-cell">0.00%</td>
         					<td class="green-cell">6-12 horas</td>
         					<td>
-        						<button class="btn depo-btn deposits" onClick="onDepositBtn(70)">Depositar</button>
+        						<button class="btn btn-primary-light" onClick="onDepositBtn(70)">Depositar</button>
         					</td>
         				</tr>
         				<tr>
@@ -336,7 +336,7 @@
                                 Si vas a retirar fondos a otro usuario de Binance. puedes utilizar Binance Pay para realizar una transferenia instantanea sin comisiones.
                             </div>
                             <div style="text-align: center;">
-                                <button class="btn depo-btn" onClick="onDepositBtn()">Depositar</button>
+                                <button class="btn btn-primary-light" onClick="onDepositBtn()">Depositar</button>
                             </div>
                         </div>
                     </div>

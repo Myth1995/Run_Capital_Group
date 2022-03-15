@@ -23,14 +23,15 @@
 	                            <label>Your Name</label>
 								<div class="input-group">
 									<span class="input-group-text"><i class="icon-user"></i></span>
-									<input class="form-control" required="" id="first_name" name="name" placeholder="Nombre Completo"/>
-									<input class="form-control m-l-10" required="" id="last_name" name="surename" placeholder="Apellidos"/>
+									<input class="form-control" required="" id="name" name="name" placeholder="Nombre Completo"/>
+									<input class="form-control m-l-10" required="" id="surename" placeholder="Apellidos"/>
 								</div>
 	                        </div>
 	                        <div class="form-group row">
             					<div class="col-sm-6">
             						<label>Telefono</label>
-            						<input class="form-control" id="telNo" name="telNo" type="tel" placeholder="Telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+            						<input class="form-control" id="telNo" type="tel" placeholder="Telefono" pattern="+[0-9]{1} [0-9]{3}-[0-9]{3}-[0-9]{4}" />
+            						<!--pattern="+[0-9]{4}-[0-9]{3}-[0-9]{4}"-->
             					</div>
             					<div class="col-sm-6">
             					    <label>Pais</label>
@@ -60,7 +61,7 @@
     	                            <label>Password Confirm</label>
     	                            <div class="input-group">
     	                                <span class="input-group-text"><i class="icon-lock"></i></span>
-    	                                <input class="form-control" type="password" name="password_confirm" required="" placeholder="*********" />
+    	                                <input class="form-control" type="password" required="" placeholder="*********" />
     	                                <div class="show-hide"><span class="show"> </span></div>
     	                            </div>
     	                        </div>
